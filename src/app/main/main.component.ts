@@ -17,15 +17,15 @@ export class MainComponent implements OnInit {
   constructor(private mainService: MainService) {
   }
 
-  private rowArray = new Array<number>();
-  private columnArray = new Array<number>();
+  public rowArray = new Array<number>();
+  public columnArray = new Array<number>();
   private rowArray2 = new Array<number>();
   private columnArray2 = new Array<number>();
-  private lettersTable = new Array<Array<String>>();
-  private feedbackTable = new Array<Array<String>>();
-  private feedbackColumnHeader = new Array<String>();
-  private feedbackRowHeader = new Array<String>();
-  private lettersArray = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I'];
+  public lettersTable = new Array<Array<String>>();
+  public feedbackTable = new Array<Array<String>>();
+  public feedbackColumnHeader = new Array<String>();
+  public feedbackRowHeader = new Array<String>();
+  public lettersArray = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I'];
 
 
   ngOnInit() {

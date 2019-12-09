@@ -13,7 +13,7 @@ import {DialogModule} from 'primeng/dialog';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
 import {MatIconModule} from '@angular/material/icon';
-import {MatNavList} from '@angular/material/list';
+import {MatListModule} from '@angular/material/list';
 import {MatExpansionModule} from '@angular/material/expansion';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatSidenavModule} from '@angular/material/sidenav';
@@ -36,8 +36,7 @@ import {MatTableModule} from '@angular/material';
     UiSidebarLeftComponent,
     UiSidebarRightComponent,
     MainComponent,
-    SidebarComponent,
-    MatNavList
+    SidebarComponent
   ],
   imports: [
     BrowserModule,
@@ -54,7 +53,8 @@ import {MatTableModule} from '@angular/material';
     FlexLayoutModule,
     MatButtonModule,
     HttpClientModule,
-    MatTableModule
+    MatTableModule,
+    MatListModule
   ],
   providers: [
     MainService
