@@ -1,0 +1,26 @@
+
+<div id="sidebar">
+  <mat-nav-list>
+    <mat-expansion-panel style="background: #4A6A8B !important">
+      <mat-expansion-panel-header>
+        <mat-icon>dashboard</mat-icon>
+        <p>Title</p>
+      </mat-expansion-panel-header>
+      <a routerLink="/canvas">Canvas</a>
+    </mat-expansion-panel>
+    <a mat-list-item [routerLinkActive]="'active'" [routerLink]="['/dashboard']">
+      <mat-icon class="sidenav-icon">dashboard</mat-icon> {{ 'Dashboard' }}
+    </a>
+    <a mat-list-item [routerLinkActive]="'active'" [routerLink]="['/screen1']">
+      <mat-icon class="sidenav-icon">build</mat-icon> {{ 'Screen1'}}
+    </a>
+    <a mat-list-item [routerLinkActive]="'active'" [routerLink]="['/screen2']">
+      <mat-icon class="sidenav-icon">people</mat-icon> {{ 'Screen2' }}
+    </a>
+    <div class="nested-menu">
+      <a mat-list-item [routerLinkActive]="'active'" [routerLink]="['/screen2']">
+        <mat-icon class="sidenav-icon">people</mat-icon> {{ 'Screen2' }}
+      </a>
+    </div>
+  </mat-nav-list>
+</div>

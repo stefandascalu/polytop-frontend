@@ -1,0 +1,32 @@
+image: node:latest
+
+#cache:
+#  paths:
+#    - node_modules/
+#
+#stages:
+#  - build
+#  - pages
+#
+#build_stage:
+#  stage: build
+#  only:
+#    - master
+#  script:
+#    - npm install
+#    - ./node_modules/@angular/cli/bin/ng build --progress false
+
+pages:
+  cache:
+    paths:
+      - node_modules/
+  script:
+    - npm install
+    - ./node_modules/@angular/cli/bin/ng build --progress false --base-href=/polytop-frontend/
+    - mv dist/dev/* public/
+  artifacts:
+    paths:
+      - public
+  only:
+    - master
+

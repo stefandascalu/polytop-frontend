@@ -1,0 +1,56 @@
+<div fxLayout="column" fxLayoutAlign="space-around" style="margin-right: 10px;">
+  <div fxFlex="30%" fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="left">
+    <div fxFlex="50%">
+      <mat-card>
+        <table style="table-layout: fixed; width: 100%">
+          <thead>
+            <th></th>
+            <th *ngFor="let letter of lettersArray">{{letter}}</th>
+          </thead>
+          <tbody>
+            <tr *ngFor="let line of lettersTable; let i = index">
+              <td>{{lettersArray[i]}}</td>
+              <td *ngFor="let column of line; let j = index">
+                <button style="width: 100%" mat-stroked-button class="smaller-button" (click)="showNext(i,j)">{{column}}</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
+      </mat-card>
+    </div>
+    <div fxFlex="50%">
+      <mat-card>
+        <div *ngFor="let number of columnArray">
+          <div>
+            <button  *ngFor="let number2 of rowArray" mat-stroked-button class="smaller-button"> {{number2}}</button>
+          </div>
+        </div>
+      </mat-card>
+    </div>
+  </div>
+  <div fxFlex="50%" fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="left">
+    <div fxFlex="100%">
+      <mat-card>
+        <div style="display: block; margin-right: auto; margin-left: auto;">
+          <table style="table-layout: fixed; width: 100%;">
+            <thead>
+              <th></th>
+              <th *ngFor="let header of feedbackColumnHeader"><pre>{{header}}</pre></th>
+            </thead>
+            <tbody>
+              <tr *ngFor="let line of feedbackTable; let i = index">
+                <td style="width: 2.70%">
+                  <pre>{{feedbackRowHeader[i]}}</pre>
+                </td>
+                <td style="width: 2.70%" *ngFor="let column of line; let j = index">
+                  <button style="width: 100%" mat-stroked-button class="smaller-button"><pre>{{column}}</pre></button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </mat-card>
+    </div>
+  </div>
+</div>

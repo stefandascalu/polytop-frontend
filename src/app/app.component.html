@@ -1,0 +1,16 @@
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+    <span>Third Line</span>
+    <span class="example-spacer"></span>
+    <mat-icon class="example-icon" aria-hidden="false" aria-label="Example heart icon">favorite</mat-icon>
+    <mat-icon class="example-icon" aria-hidden="false" aria-label="Example delete icon">delete</mat-icon>
+  </mat-toolbar-row>
+</mat-toolbar>
+<div class="example-container" fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutAlign="left">
+  <div fxFlex="8%">
+    <app-sidebar></app-sidebar>
+  </div>
+  <div fxFlex="92%" style="overflow-y: auto; margin-top: 15px; margin-left: 10px;">
+    <router-outlet></router-outlet>
+  </div>
+</div>
